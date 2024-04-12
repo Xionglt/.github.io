@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.3, maxmum-scale=1.0, minimum-scale=0.3">
+    <meta charset="UTF-8">
+    <title>创作者故事</title>
+    <link href="/dist/css/strip.css" rel="stylesheet">
+    <link href="/dist/css/strip.css" rel="stylesheet">
+    <link href="/dist/css/strip.css" rel="stylesheet">
+  
+  
+  <!-- Bootstrap core CSS -->
+  <link href="2020/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="2020/css/modern-business.css" rel="stylesheet">
+
+    <style>
+      /* Primary Styles */
+*, *::before, *::after {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: sans-serif;
+   font-size: 1em;
+   color: #333;
+}
+
+h1 {
+  font-size: 1.4em;
+}
+
+em {
+   font-style: normal;
+}
+
+a {
+   text-decoration: none;
+   color: inherit;
+} 
+
+/* Layout */
+.s-layout {
+   display: flex;
+   width: 100%;
+   min-height: 100vh;
+}
+
+.s-layout__content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex: 1;
+}
+
+/* Sidebar */
+.s-sidebar__trigger {
+   z-index: 2;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 4em;
+   background: #fbfcfc;
+}
+
+.s-sidebar__trigger > i {
+   display: inline-block;
+   margin: 1.5em 0 0 1.5em;
+   color: #f07ab0;
+}
+
+.s-sidebar__nav {
+   position: fixed;
+   top: 0;
+   left: -15em;
+   overflow: hidden;
+   transition: all .3s ease-in;
+   width: 15em;
+   height: 100%;
+   background: #fdfefe;
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.s-sidebar__nav:hover,
+.s-sidebar__nav:focus,
+.s-sidebar__trigger:focus + .s-sidebar__nav,
+.s-sidebar__trigger:hover + .s-sidebar__nav {
+   left: 0;
+}
+
+.s-sidebar__nav ul {
+   position: absolute;
+   top: 4em;
+   left: 0;
+   margin: 0;
+   padding: 0;
+   width: 15em;
+}
+
+.s-sidebar__nav ul li {
+   width: 100%;
+}
+
+.s-sidebar__nav-link {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 4em;
+}
+
+.s-sidebar__nav-link em {
+   position: absolute;
+   top: 50%;
+   left: 4em;
+   transform: translateY(-50%);
+}
+
+.s-sidebar__nav-link:hover {
+   background: #fafafb;
+}
+
+.s-sidebar__nav-link > i {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: inline-block;
+   width: 4em;
+   height: 4em;
+}
+
+.s-sidebar__nav-link > i::before {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+/* Mobile First */
+@media (min-width: 42em) {
+   .s-layout__content {
+      margin-left: 4em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      width: 4em;
+   }
+   
+   .s-sidebar__nav {
+      width: 4em;
+      left: 0;
+   }
+   
+   .s-sidebar__nav:hover,
+   .s-sidebar__nav:focus,
+   .s-sidebar__trigger:hover + .s-sidebar__nav,
+   .s-sidebar__trigger:focus + .s-sidebar__nav {
+      width: 15em;
+   }
+}
+
+@media (min-width: 68em) {
+   .s-layout__content {
+      margin-left: 15em;
+   }
+   
+   /* Sidebar */
+   .s-sidebar__trigger {
+      display: none
+   }
+   
+   .s-sidebar__nav {
+      width: 15em;
+   }
+   
+   .s-sidebar__nav ul {
+      top: 1.3em;
+   }
+}
+
+       .title{
+            width:200px;
+            height:50px;
+            line-height:50px;
+            text-align:center;
+            position:relative;
+        }
+
+
+        .title::after, .title::before{
+            position: absolute;
+            width:500px;
+            height:1px;
+            background:#000;
+            content:'';
+            top:25px;
+        }
+
+ 
+
+        .title::after{
+            left:0;
+        }
+
+
+        .title::before{
+            right:0;
+        }
+           .head_box{
+          width: 100%;
+          height: 40px;
+          background-color: #fff;
+          display: flex;
+        }
+        .head_box div{
+          width: 100px;
+          text-align: center;
+          line-height: 40px;
+          font-weight: 600;
+        }
+        .box {
+              margin: 10px;
+              column-count: 3;
+              column-gap: 10px;
+          }
+          .item {
+              margin-bottom: 10px;
+          }
+          .item img{
+              width: 100%;
+              height:100%;
+          }
+          #container{
+             display: flex;
+             justify-content: space-between;
+             flex-wrap: wrap;
+             width: 100%;
+             padding: 100px;
+             box-sizing: border-box;
+             position: relative;
+          }
+          .namebox{
+            display: flex;
+            flex-direction: column;
+            /* align-items: center; */
+            justify-content: center;
+            margin-top: 24px;
+          }
+          .namebox .imgs{
+            width: 333px;
+            height: 500px;
+            margin-bottom: 12px;
+          }
+          p{
+            /* font-weight: 600;
+            color: #333333; */
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+          }
+          .namebox .img_tx{
+            width: 30px!important;
+            height: 30px!important;
+            border-radius: 50%;
+            position: relative;
+          }
+          .txbox{
+            display: flex;
+            /* width: 100px; */
+            /* justify-content: space-between; */
+            align-items: center;
+            margin-top: 12px;
+            position: relative;
+          }
+          .tx_span{
+            font-size: 14px;
+            color: #999999;
+            margin-left: 24px;
+            
+          }
+      </style>
+    
+    <!-- <link rel="stylesheet" href="./Live2D-master/live2d/css/live2d.css" /> -->
+    <!-- <style>
+        html,body,div,ul,li {
+            padding: 0;
+            margin: 0;
+        }
+        .contaner {
+            display: flex;
+            justify-content:space-between;
+            flex-wrap: wrap;
+            align-items: center; /*item内容垂直居中*/
+        }
+        .item {
+            font-size: 40px;
+            width: calc((100% - 40px)/3);
+            display: inline-block;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .item:nth-child(3n - 1) {
+            padding:0 20px;
+        }
+    </style> -->
+</head>
+
+<body 
+ 
+style="background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100% 100%; ">
+<div class="s-layout">
+  <!-- Sidebar -->
+  <div class="s-layout__sidebar" >
+    <a class="s-sidebar__trigger" href="#0">
+       <i class="fa fa-bars"></i>
+    </a>
+  
+    
+    <nav class="s-sidebar__nav" style="position: absolute;" >
+     
+       <ul>
+         <li>
+            <a class="s-sidebar__nav-link" style="margin-bottom: 300px;;color: #f7f6f6;font-family:Borsok Typeface;color:rgb(147, 4, 4);font-size: 30px;"href="#0" >
+               <i class="fa fa-nav" ></i><em></em>
+            </a>
+         </li>
+          <li>
+             <a class="s-sidebar__nav-link" style="color: #000;font-size: 28px;" href="index.html">
+                <i class="fa fa-home" ></i><em>🏠发现</em>
+             </a>
+          </li>
+          <li>
+             <a class="s-sidebar__nav-link"style="color: #000;font-size: 28px;" href="tea.html">
+               <i class="fa fa-user"></i><em>➕发布</em>
+             </a>
+          </li>
+          <li>
+             <a class="s-sidebar__nav-link" style="color: #000;font-size: 28px;" href="west.html">
+            
+                <i class="fa fa-camera"></i><em>🔔通知</em>
+             </a>
+          </li>
+       </ul>
+    </nav>
+  </div>
+  
+  <!-- Content -->
+  <main class="s-layout__content">
+    
+  
+ <nav class="navbar fixed-top navbar-expand-lg navbar-dark  fixed-top " style="height: 400px;position: absolute;top: 0; "  >
+
+  <div style="height: 200px;">
+    <div class="" style="width: 100%;height: 200px; " >
+      <div class="" style="width: 500px; height: 200px;">
+        <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+        top: 180px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        left: 300px;">时代之选 </span>  
+      </div>
+      <div style="width: 500px; height: 200px;">
+        <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        top: 10px;
+        right: 600px;">
+      <a class="navbar-brand" href="index.html"><img src="./photo/商标.jpg "style="width: 400px; height: 300px;"  ></a>
+     </div>
+      <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+    
+    <div class="" style="width: 300px; height: 200px;">
+      <span class="hcqStyle7" style="font-size: 40px; position: absolute;
+      top: 180px;
+      padding: 0;
+      margin: 0;
+      right: 280px;">瓷国明珠 </span>  
+    </div>
+    </div>
+
+    <div style="width: 1750px;height: 300px;margin-top: 100px;"class="title";>
+
+          <ul  style="top: 0px;text-align: center;">
+              <li style="display: inline;margin-right: 100px;"><span><a href="index.html"style="color:inherit;"class="hcqStyle5">首页</a></span></li>
+              <li style="display: inline;margin-right: 100px;"><span><a href="http://127.0.0.1:7860/?__theme=dark"style="color:inherit;" class="hcqStyle5">AI创作          </a></span> </li>
+              <li  style="display: inline;margin-right: 100px;"><span><a href="czzym.html"style="color:inherit;"class="hcqStyle5">创作故事          </a></span></li>
+            <li style="display: inline;margin-right: 100px;"><span><a href="myshop.html"style="color:inherit;"class="hcqStyle5">明阳瓷器          </a></span></li>
+    
+        </ul>
+    </div>
+  </div>
+  </nav>
+      <div id="container" class="box" style="top: 300px;"> </div>
+  
+<script src="/loadImg_czzym.js"></script>
+<!-- <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+    <div class="hide-button">隐藏</div>
+</div> -->
+<script  >
+getPhotos("./photos/summary/3_shop.xml","story");
+
+</script>
+<!-- <script src="/JQ/js/jquery-1.11.0.min.js"></script>
+<script src="/JQ/dist/js/strip.pkgd.min.js"></script>  -->
+<!-- <template>
+    <div class="waterfall-width-column">
+      <div class="image-box" v-for="img in imgList" :key="img">
+        <img :src="img" alt="" />
+      </div>
+    </div>
+  </template>
+  <style lang="scss" scoped>
+  .waterfall-width-column {
+    column-count: 3;
+    column-gap: 10px;
+    .image-box {
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  </style>     -->
+<!-- <footer>
+<script type="text/javascript">
+    var message_Path = '/live2d/'
+    var home_Path = 'https://haremu.com/'  //此处修改为你的域名，必须带斜杠
+</script>
+<script type="text/javascript" src="/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/live2d/js/message.js"></script>
+<script type="text/javascript">
+    loadlive2d("live2d", "/live2d/model/tia/model.json");
+</script>
+</footer> -->
+</main>
+</div>
+</body>
+</html>
